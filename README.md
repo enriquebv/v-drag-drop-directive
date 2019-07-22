@@ -1,4 +1,4 @@
-# v-drag-drop-directive
+# vue-directive-dnd
 
 Simple Vue plugin to add touch support to native HTML5 Drag And Drop API.
 

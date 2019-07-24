@@ -33,7 +33,7 @@ Using `v-draggable`.
  v-drag
  v-draggable
 >
- <!-- Element content -->
+ <!-- Content -->
 </div>
 ```
 
@@ -46,7 +46,7 @@ You can provide options to the directive:
     v-drag
     v-draggable="allowDrag"
   >
-    <!-- Element content -->
+    <!-- Content -->
   </div>
 </template>
 
@@ -82,7 +82,7 @@ hideDefaultGhost|`Boolean`|false|To hide the default ghost provided by navigator
       hideDefaultGhost: hideGhost
      }"
   >
-    <!-- Element content -->
+    <!-- Content -->
   </div>
 </template>
 

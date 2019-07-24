@@ -8,6 +8,11 @@ Simple Vue plugin to add touch support to native HTML5 Drag And Drop API.
   * If it's needed, you can define different event handlers when toch it's used (`@dragstart:touch`, etc). 
 * It will provide the ability to use a handle to drag.
 
+## Things to do
+* [x] Native Drag And Drop support.
+* [x] Touch Drag and Drop simulation.
+* [ ] Handles support.
+
 ## Getting started
 
 Install package:

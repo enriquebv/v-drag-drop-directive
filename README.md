@@ -68,3 +68,4 @@ Options|Type|Default|Description
 -|-|-|-
 enabled|`Boolean`|true|Represents if the element can be draggable.
 touchPressTime|`Number`|1000|Time in miliseconds, to allow the drag of an element with touch interaction.
+hideDefaultGhost|`Boolean`|false|To hide the default ghost provided by navigator.

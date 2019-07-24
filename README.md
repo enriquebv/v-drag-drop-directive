@@ -97,3 +97,38 @@ export default {
 };
 </script>
 ```
+
+### Make an element droppable
+Using `v-droppable`.
+
+```html
+<div
+  v-drag
+  v-droppable
+  class="dropable"
+></div>
+```
+You can toggle it providing a boolean as an option:
+
+```html
+<template>
+  <div class="drop"
+    v-drag
+    v-droppable="allowDrop"
+  >
+    <!-- Content -->
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      // You can change that variable dynamically
+      // and drop behaviour will change.
+      allowDrop: true
+    };
+  }
+};
+</script>
+```

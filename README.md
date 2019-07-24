@@ -4,7 +4,7 @@ Simple Vue plugin to add touch support to native HTML5 Drag And Drop API.
 
 * It will use directives (`v-drag`, `v-drop`) to already existing elements to **avoid ugly and excesive syntax/components**.
 * Using touch, it will fire native Drag N' Drop events (`@dragenter`, `@dragleave`, `@dragstart`...), same reason.
-  * Events passed to handler when using touch will be [TouchEvent](https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent).
+  * Events passed to handler when using touch will be the original [TouchEvent](https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent).
   * If it's needed, you can define different event handlers when toch it's used (`@dragstart:touch`, etc). 
 * It will provide the ability to use a handle to drag.
 
@@ -36,14 +36,15 @@ Using `v-draggable`.
  <!-- Element content -->
 </div>
 ```
-#### Options
+
+You can provide options to the directive:
 
 **Boolean**: Represents if the element can be draggable.
 ```html
 <template>
   <div class="drag"
     v-drag
-    v-draggable="dragStatus"
+    v-draggable="allowDrag"
   >
     <!-- Element content -->
   </div>
@@ -55,17 +56,44 @@ export default {
     return {
       // You can change that variable, and draggable behaviour
       // of the element will be disabled.
-      dragStatus: true
+      allowDrag: true
     };
   }
 };
 </script>
 ```
 
-**Object**: An options object.
+**Object**:
 
 Options|Type|Default|Description
 -|-|-|-
 enabled|`Boolean`|true|Represents if the element can be draggable.
-touchPressTime|`Number`|1000|Time in miliseconds, to allow the drag of an element with touch interaction.
+touchPressTime|`Number`|1000|Time in miliseconds, to allow the drag of an element, only with touch interaction.
 hideDefaultGhost|`Boolean`|false|To hide the default ghost provided by navigator.
+
+```html
+<template>
+  <div
+    class="drag"
+    v-drag
+    v-draggable="{
+      enabled: allowDrag,
+      touchPressTime: 1000,
+      hideDefaultGhost: hideGhost
+     }"
+  >
+    <!-- Element content -->
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      allowDrag: true,
+      hideGhost: true
+    };
+  }
+};
+</script>
+```

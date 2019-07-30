@@ -1,11 +1,19 @@
 {
   "name": "vue-directive-dnd",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/vue-directive-dnd.umd.min.js",
   "repository": "https://github.com/enriquebv/vue-directive-dnd.git",
   "author": "Enrique Bernabeu <ebvcontacto@gmail.com>",
   "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "vue-cli-service build --mode production --entry ./src/index.js --dest ./dist/ --target lib"
+  },
   "dependencies": {
     "html2canvas": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.9.3",
+    "vue-template-compiler": "^2.6.10"
   }
 }

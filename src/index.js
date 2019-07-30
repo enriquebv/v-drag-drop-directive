@@ -1,6 +1,6 @@
-import dragDirective from "./src/directives/drag";
-import draggableDirective from "./src/directives/draggable";
-import droppableDirective from "./src/directives/droppable";
+import dragDirective from "./directives/drag";
+import draggableDirective from "./directives/draggable";
+import droppableDirective from "./directives/droppable";
 
 export default {
   install(Vue) {

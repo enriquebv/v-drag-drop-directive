@@ -1,0 +1,11 @@
+{
+  "name": "vue-directive-dnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/enriquebv/vue-directive-dnd.git",
+  "author": "Enrique Bernabeu <ebvcontacto@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.3"
+  }
+}

@@ -16,13 +16,12 @@ Simple Vue plugin to add touch support to native HTML5 Drag And Drop API.
 ## Getting started
 
 Install package:
-```
+```bash
 npm install vue-directive-dnd
 ```
 
 Require the plugin:
-```
-import Vue from 'vue';
+```js
 import VueDirectiveDnd from 'vue-directive-dnd';
 
 Vue.use(VueDirectiveDnd)
